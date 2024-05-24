@@ -1,0 +1,17 @@
+
+
+
+### 测试生成
+POST http://localhost:5000/unit-test/testCode
+Accept: application/json, text/plain, */*
+Content-Type: application/json;charset=UTF-8
+
+{
+  "code": "@Override\npublic void saveBusinessdata(List<BusinessModel> businessModels, ApaasBusinessObject apaasBusinessObject) {\ncom.xdap.api.moudle.businessobject.pojo.entity.ApaasBusinessObject apaasBusinessObject1 = DefaultConvertor.convert(apaasBusinessObject, com.xdap.api.moudle.businessobject.pojo.entity.ApaasBusinessObject.class );\nList<com.xdap.bo.api.module.bo.pojo.BusinessModel> businessModelList1 = DefaultConvertor.convertList(businessModels, com.xdap.bo.api.module.bo.pojo.BusinessModel.class, JSONWriter.Feature.WriteMapNullValue);\nbusinessDataService.saveBusinessdata(businessModelList1, apaasBusinessObject1);\n}",
+  "className": "MissService"
+}
+
+### 解析java类，生成方法体的代码
+GET http://localhost:8080/javaParse/methodBody?javaFilePath=/Users/xuanmiss/code_space/ideaProjects/github/xuanmiss/unit-test-auto/src/main/java/com/miss/unittestauto/service/JavaFileParseService.java
+Accept: application/json, text/plain, */*
+Content-Type: application/json;charset=UTF-8
